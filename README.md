@@ -75,7 +75,7 @@ The default compromise is selected by normalising objectives and minimising thei
 For each release source, the prototype uses a reflected Gaussian plume approximation on a horizontal plane. Concentration is a relative model output, not a calibrated ppm value. Wind direction and speed, source strength, and dispersion spread are configurable. Multiple sources are superposed.
 
 ### Detector response
-Each candidate detector receives a response score from the maximum normalised concentration at its location across scenarios, attenuated by distance to the source and reduced where a facility obstacle blocks the source-to-detector segment. A grid cell is considered covered when its response exceeds the configured threshold.
+Each detector produces a spatial response field from local relative concentration multiplied by exponential distance attenuation. A simplified 2D line-of-sight check reduces response behind obstacles. A grid cell is considered covered when the combined detector response exceeds the configured threshold. This is a transparent proxy, not a vendor sensor-performance model.
 
 ### Optimisation
 The optimiser searches subsets of candidate detector positions. It minimises:
