@@ -1,0 +1,30 @@
+{
+  "name": "Synthetic Process Unit A",
+  "width": 60,
+  "height": 40,
+  "resolution": 1.0,
+  "obstacles": [
+    {"x_min": 18, "y_min": 7, "x_max": 24, "y_max": 18},
+    {"x_min": 35, "y_min": 20, "x_max": 43, "y_max": 31},
+    {"x_min": 8, "y_min": 27, "x_max": 15, "y_max": 33}
+  ],
+  "candidate_points": [
+    [5,5],[15,5],[27,5],[40,5],[53,5],
+    [5,15],[15,15],[27,15],[40,15],[53,15],
+    [5,25],[17,25],[27,25],[48,25],[55,25],
+    [5,36],[17,36],[28,36],[43,36],[55,36],
+    [30,10],[50,12],[28,30],[10,20],[48,35]
+  ],
+  "scenarios": [
+    {"name":"North-east wind, compressor leak","risk_weight":1.2,"sources":[
+      {"x":25,"y":13,"strength":1.0,"wind_direction_deg":25,"wind_speed":3.0,"sigma_y":3.0,"sigma_x":9.0},
+      {"x":44,"y":12,"strength":0.65,"wind_direction_deg":25,"wind_speed":3.0,"sigma_y":2.5,"sigma_x":8.0}
+    ]},
+    {"name":"South-west wind, process flange leak","risk_weight":1.0,"sources":[
+      {"x":32,"y":28,"strength":0.9,"wind_direction_deg":205,"wind_speed":2.2,"sigma_y":3.5,"sigma_x":10.0}
+    ]},
+    {"name":"Crosswind, pump seal release","risk_weight":0.8,"sources":[
+      {"x":12,"y":20,"strength":0.8,"wind_direction_deg":90,"wind_speed":2.8,"sigma_y":2.8,"sigma_x":7.0}
+    ]}
+  ]
+}
